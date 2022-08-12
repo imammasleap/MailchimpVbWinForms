@@ -45,11 +45,13 @@ Partial Class B2iTech
         '
         'txtSubject
         '
+        Me.txtSubject.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtSubject.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtSubject.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
         Me.txtSubject.Location = New System.Drawing.Point(16, 99)
         Me.txtSubject.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSubject.MaxLength = 36
+        Me.txtSubject.MaxLength = 120
         Me.txtSubject.MinimumSize = New System.Drawing.Size(1, 16)
         Me.txtSubject.Name = "txtSubject"
         Me.txtSubject.Radius = 0
@@ -65,6 +67,9 @@ Partial Class B2iTech
         'HtmlEditControlMessage
         '
         Me.HtmlEditControlMessage.AcceptsReturn = True
+        Me.HtmlEditControlMessage.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.HtmlEditControlMessage.AvailableInlineStyles = CType(resources.GetObject("HtmlEditControlMessage.AvailableInlineStyles"), System.Collections.Generic.List(Of String))
         Me.HtmlEditControlMessage.BackColor = System.Drawing.SystemColors.Control
         Me.HtmlEditControlMessage.BaseURL = Nothing
@@ -109,6 +114,7 @@ Partial Class B2iTech
         '
         'btnSend
         '
+        Me.btnSend.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnSend.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSend.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
         Me.btnSend.Location = New System.Drawing.Point(16, 576)
@@ -121,6 +127,8 @@ Partial Class B2iTech
         '
         'UiPanel1
         '
+        Me.UiPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.UiPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.UiPanel1.Controls.Add(Me.picBoxUserAvater)
         Me.UiPanel1.Controls.Add(Me.lblUserName)
@@ -169,6 +177,7 @@ Partial Class B2iTech
         '
         'btnHelp
         '
+        Me.btnHelp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnHelp.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
         Me.btnHelp.Image = CType(resources.GetObject("btnHelp.Image"), System.Drawing.Image)
@@ -184,6 +193,7 @@ Partial Class B2iTech
         '
         'btnNotification
         '
+        Me.btnNotification.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNotification.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNotification.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
         Me.btnNotification.Image = CType(resources.GetObject("btnNotification.Image"), System.Drawing.Image)
@@ -199,6 +209,7 @@ Partial Class B2iTech
         '
         'btnSignIn
         '
+        Me.btnSignIn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSignIn.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
         Me.btnSignIn.Location = New System.Drawing.Point(760, 12)
@@ -212,6 +223,7 @@ Partial Class B2iTech
         '
         'btnSettings
         '
+        Me.btnSettings.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSettings.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
         Me.btnSettings.Image = CType(resources.GetObject("btnSettings.Image"), System.Drawing.Image)
@@ -250,7 +262,6 @@ Partial Class B2iTech
         Me.Controls.Add(Me.UiPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
         Me.Name = "B2iTech"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "B2iTech"

@@ -4,7 +4,7 @@ Imports MailChimp.Net.Models
 
 Public Class B2iTech
 
-    Dim appConfig As AppConfig = New AppConfig()
+    Dim appConfig As AppConfig
     Dim apiKey As String
 
     Dim service As MailchimpService
@@ -27,6 +27,7 @@ Public Class B2iTech
 
 
     Private Sub loadMethod()
+        appConfig = New AppConfig()
 
         apiKey = appConfig.getApiKey()
 
@@ -66,6 +67,7 @@ Public Class B2iTech
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
 
         If btnSignIn.Text = "Sign In" Then
+            loadMethod()
             shownMethod()
         ElseIf btnSignIn.Text = "Sign Out" Then
             appConfig.signOut()
@@ -101,18 +103,25 @@ Public Class B2iTech
 
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
 
-        Dim subject As String = txtSubject.Text
-        Dim body As String = HtmlEditControlMessage.DocumentHTML
+        apiKey = appConfig.getApiKey()
 
-
-        If subject Is Nothing Then
-            MessageBox.Show("Subject is empty!")
-        ElseIf body Is Nothing Then
-            MessageBox.Show("Email body is empty!")
+        If apiKey Is Nothing Then
+            Using signIn = New SignIn()
+                signIn.ShowDialog()
+                If signIn.isSignedIn = True Then
+                    loadMethod()
+                End If
+            End Using
         Else
-
-            Dim task = service.SendEmail(subject, body, signedInUser.AccountName, appConfig)
-
+            Dim subject As String = txtSubject.Text
+            Dim body As String = HtmlEditControlMessage.DocumentHTML
+            If subject Is Nothing Then
+                MessageBox.Show("Subject is empty!")
+            ElseIf body Is Nothing Then
+                MessageBox.Show("Email body is empty!")
+            Else
+                Dim task = service.SendEmail(subject, body, signedInUser.AccountName, appConfig)
+            End If
         End If
 
     End Sub

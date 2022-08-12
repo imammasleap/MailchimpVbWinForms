@@ -1,7 +1,7 @@
 ﻿Public Class SignIn
 
     Dim appConfig As AppConfig = New AppConfig()
-    Public isSignedIn As Boolean
+    Public isSignedIn As Boolean = False
 
 
     Private Sub txtMcApiKey_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtMcApiKey.Validating

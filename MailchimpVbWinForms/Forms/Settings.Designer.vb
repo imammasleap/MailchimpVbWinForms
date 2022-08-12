@@ -130,7 +130,7 @@ Partial Class Settings
         '
         Me.btnApplySetting.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnApplySetting.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
-        Me.btnApplySetting.Location = New System.Drawing.Point(14, 603)
+        Me.btnApplySetting.Location = New System.Drawing.Point(14, 577)
         Me.btnApplySetting.MinimumSize = New System.Drawing.Size(1, 1)
         Me.btnApplySetting.Name = "btnApplySetting"
         Me.btnApplySetting.Size = New System.Drawing.Size(233, 35)
@@ -144,7 +144,7 @@ Partial Class Settings
         Me.btnClose.FillColor = System.Drawing.Color.Transparent
         Me.btnClose.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
         Me.btnClose.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnClose.Location = New System.Drawing.Point(268, 603)
+        Me.btnClose.Location = New System.Drawing.Point(268, 577)
         Me.btnClose.MinimumSize = New System.Drawing.Size(1, 1)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.RectColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -280,7 +280,7 @@ Partial Class Settings
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(386, 650)
+        Me.ClientSize = New System.Drawing.Size(386, 625)
         Me.Controls.Add(Me.lineCampaign)
         Me.Controls.Add(Me.lineRecipient)
         Me.Controls.Add(Me.lineReply)
@@ -297,6 +297,7 @@ Partial Class Settings
         Me.Controls.Add(Me.txtReplyFrom)
         Me.Controls.Add(Me.combSegment)
         Me.Controls.Add(Me.combAudiences)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Settings"

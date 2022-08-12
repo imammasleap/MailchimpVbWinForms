@@ -18,7 +18,7 @@ Public Class AppConfig
     Public Const campaignTitleKey = "campaignTitleKey"
     Public Const campaingnTypeKey = "campaingnTypeKey"
     ' Dictionary
-    Public configuration As New Dictionary(Of String, Object)
+    Public configuration As Dictionary(Of String, Object)
 
     ' Constructor
     Public Sub New()
@@ -35,7 +35,8 @@ Public Class AppConfig
                 End If
             End Using
         End If
-        Return Nothing
+
+        Return New Dictionary(Of String, Object)
     End Function
 
     Public Sub setSettings()
