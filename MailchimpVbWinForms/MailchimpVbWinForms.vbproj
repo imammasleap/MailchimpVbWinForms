@@ -52,7 +52,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
+    <OptionExplicit>Off</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionCompare>Binary</OptionCompare>
@@ -79,6 +79,9 @@
     <Reference Include="HtmlAgilityPack, Version=1.8.5.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.8.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
+    <Reference Include="HTMLEditor, Version=2.4.10.300, Culture=neutral, PublicKeyToken=7e79dd0f3fedb2ef, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zoople.HTMLEditor.2.4.10.300\lib\net40\HTMLEditor.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -88,6 +91,7 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="SunnyUI, Version=3.2.2.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb, processorArchitecture=MSIL">
       <HintPath>..\packages\SunnyUI.3.2.2\lib\net40\SunnyUI.dll</HintPath>
     </Reference>
@@ -121,16 +125,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Config.Designer.vb">
-      <DependentUpon>Config.vb</DependentUpon>
+    <Compile Include="Forms\B2iTech.Designer.vb">
+      <DependentUpon>B2iTech.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Config.vb">
+    <Compile Include="Forms\B2iTech.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Dashboard.Designer.vb">
-      <DependentUpon>Dashboard.vb</DependentUpon>
+    <Compile Include="Forms\Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dashboard.vb">
+    <Compile Include="Forms\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignIn.Designer.vb">
+      <DependentUpon>SignIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SignIn.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Models\AppConfig.vb" />
@@ -150,13 +160,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Services\MailchimpService.vb" />
+    <Compile Include="Utils\Extantion.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\Config.resx">
-      <DependentUpon>Config.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\B2iTech.resx">
+      <DependentUpon>B2iTech.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dashboard.resx">
-      <DependentUpon>Dashboard.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignIn.resx">
+      <DependentUpon>SignIn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -166,7 +180,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MailchimpVbWinForms_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
