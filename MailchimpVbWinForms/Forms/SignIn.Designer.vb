@@ -109,7 +109,7 @@ Partial Class SignIn
         Me.txtMcApiKey.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!)
         Me.txtMcApiKey.Location = New System.Drawing.Point(12, 259)
         Me.txtMcApiKey.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtMcApiKey.MaxLength = 36
+        Me.txtMcApiKey.MaxLength = 128
         Me.txtMcApiKey.MinimumSize = New System.Drawing.Size(1, 16)
         Me.txtMcApiKey.Name = "txtMcApiKey"
         Me.txtMcApiKey.ShowText = False
